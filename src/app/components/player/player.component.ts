@@ -54,10 +54,10 @@ export class PlayerComponent implements OnInit, OnDestroy {
         this.isPlaying = false;
         this.stopMetadataUpdates();
       },
-      onloaderror: (_, error: any) => {
+      onloaderror: (event: any, error: any) => {
         this.handleError('Erro ao carregar o stream: ' + error);
       },
-      onplayerror: (_, error: any) => {
+      onplayerror: (event: any, error: any) => {
         this.handleError('Erro ao reproduzir: ' + error);
       },
       onend: () => {
