@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Howl } from 'howler';
 import { FormsModule } from '@angular/forms';
 
