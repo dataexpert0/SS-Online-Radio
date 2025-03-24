@@ -1,11 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Howl } from 'howler';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-player',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.scss']
 })
@@ -53,10 +54,10 @@ export class PlayerComponent implements OnInit, OnDestroy {
         this.isPlaying = false;
         this.stopMetadataUpdates();
       },
-      onloaderror: (_, error) => {
+      onloaderror: (_, error: any) => {
         this.handleError('Erro ao carregar o stream: ' + error);
       },
-      onplayerror: (_, error) => {
+      onplayerror: (_, error: any) => {
         this.handleError('Erro ao reproduzir: ' + error);
       },
       onend: () => {
