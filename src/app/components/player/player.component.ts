@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-player',
   standalone: true,
-  imports: [FormsModule, CommonModule, Howl],
+  imports: [FormsModule, CommonModule],
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.scss']
 })
