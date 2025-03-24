@@ -83,7 +83,7 @@ export class PlayerComponent implements OnInit, OnDestroy {
   private updateNowPlaying(): void {
     this.currentSong = "Obtendo informações...";
     setTimeout(() => {
-      this.currentSong = "Música Atual - Artista";
+      this.currentSong = "Welcome to Seven Sins Radio Station!";
     }, 1000);
   }
 
