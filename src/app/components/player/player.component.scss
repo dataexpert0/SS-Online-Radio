@@ -1,0 +1,78 @@
+.player-container {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    color: white;
+    text-align: center;
+  }
+
+  .status-indicator {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+
+  .status-indicator.playing {
+    background: green;
+  }
+
+  .status-indicator.error {
+    background: red;
+  }
+
+  .song-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .retry-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .player-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .play-button {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .play-button:hover {
+    transform: scale(1.05);
+  }
+
+  .volume-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  input[type="range"] {
+    width: 100px;
+  }

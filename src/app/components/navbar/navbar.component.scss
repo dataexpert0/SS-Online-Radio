@@ -1,0 +1,35 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    .logo {
+      h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        color: #ff4757;
+      }
+      
+      .tagline {
+        font-size: 0.8rem;
+        opacity: 0.7;
+      }
+    }
+    
+    .nav-links {
+      a {
+        color: white;
+        text-decoration: none;
+        margin-left: 1.5rem;
+        transition: color 0.3s;
+        
+        &:hover {
+          color: #ff4757;
+        }
+      }
+    }
+  }

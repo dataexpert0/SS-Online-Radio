@@ -1,0 +1,31 @@
+<div class="player-container">
+    <div class="player-info">
+      <div class="status-indicator" [class.playing]="isPlaying" [class.error]="errorMessage">
+        {{ errorMessage ? 'ERRO' : (isPlaying ? 'TOCANDO AGORA' : 'PAUSADO') }}
+      </div>
+      
+      <div class="song-info">
+        <div class="song-title">
+          {{ currentSong }}
+          <span *ngIf="isLoading" class="loading-icon">↻</span>
+        </div>
+      </div>
+      
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+        <button class="retry-btn" (click)="retryConnection()">Tentar novamente</button>
+      </div>
+    </div>
+  
+    <div class="player-controls">
+      <button class="play-button" (click)="togglePlay()" [disabled]="isLoading">
+        {{ isPlaying ? 'PAUSAR' : 'TOCAR' }}
+      </button>
+      
+      <div class="volume-control">
+        <span>Volume:</span>
+        <input type="range" min="0" max="100" [(ngModel)]="volume" (input)="changeVolume()">
+        <span class="volume-value">{{ volume }}%</span>
+      </div>
+    </div>
+  </div>
