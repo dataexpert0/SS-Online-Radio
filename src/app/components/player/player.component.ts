@@ -18,7 +18,7 @@ export class PlayerComponent implements OnInit, OnDestroy {
   public volume: number = 70;
 
   private streamUrl: string = "https://s2.free-shoutcast.com/stream/18088";
-  private streamPassword: string = "pilantra123";
+  private streamPassword: string = "TESTE-DEMO";
   private howl: Howl | null = null;
   private metadataInterval: any;
 
